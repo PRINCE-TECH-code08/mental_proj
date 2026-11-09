@@ -1,0 +1,15 @@
+Random Forest {'Model': 'Random Forest (tuned, nested CV)', 'NestedCV_MAE_mean': np.float64(0.34867707215409793), 'NestedCV_MAE_sd': np.float64(0.018760480470518717), 'NestedCV_R2_mean': np.float64(0.8603719115145069), 'NestedCV_R2_sd': np.float64(0.015821343240271332), 'seconds': 69.1085045337677} {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 0.33, 'max_depth': None}
+HistGradientBoosting {'Model': 'HistGradientBoosting (tuned, nested CV)', 'NestedCV_MAE_mean': np.float64(0.35729909826675665), 'NestedCV_MAE_sd': np.float64(0.013514642212258246), 'NestedCV_R2_mean': np.float64(0.8559500368004589), 'NestedCV_R2_sd': np.float64(0.008328528355383108), 'seconds': 58.16873574256897} {'min_samples_leaf': 10, 'max_leaf_nodes': 31, 'max_iter': 800, 'learning_rate': 0.03, 'l2_regularization': 0.1}
+                             Model  CV_MAE_mean  CV_MAE_sd  CV_R2_mean  Train_R2_mean
+0  Random Forest (baseline config)       0.3574     0.0121      0.8519         0.9792
+1             HistGradientBoosting       0.3972     0.0102      0.8303         0.9189
+2                    Decision Tree       0.4409     0.0141      0.7195         1.0000
+3                Gradient Boosting       0.4499     0.0132      0.7867         0.8172
+4                Linear Regression       0.5239     0.0177      0.7174         0.7251
+5                            Ridge       0.5239     0.0177      0.7174         0.7251
+6                            Lasso       0.5374     0.0203      0.7075         0.7108
+7                     Dummy (mean)       1.0436     0.0245     -0.0014         0.0000
+                                     Model  NestedCV_MAE_mean  NestedCV_MAE_sd  NestedCV_R2_mean  NestedCV_R2_sd  seconds
+0         Random Forest (tuned, nested CV)             0.3487           0.0188            0.8604          0.0158  69.1085
+1  HistGradientBoosting (tuned, nested CV)             0.3573           0.0135            0.8560          0.0083  58.1687
+Random Forest {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 0.33, 'max_depth': None}

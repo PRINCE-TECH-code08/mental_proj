@@ -1,0 +1,24 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: pip install -r requirements-dev.txt
+      - name: Lint (syntax errors / undefined names)
+        run: ruff check --select E9,F63,F7,F82 src backend tests scripts
+      - name: Baseline files unchanged
+        run: cd baseline && sha256sum -c CHECKSUMS.sha256
+      - name: Python tests (incl. FastAPI TestClient)
+        run: python -m unittest discover -s tests -v
+      - name: Frontend logic tests
+        run: node --test frontend/lib.test.js
+      - name: Baseline reproduces exactly
+        run: python scripts/02_baseline_reproduction.py
+      - name: Docker build
+        run: docker build -t mhp-api .

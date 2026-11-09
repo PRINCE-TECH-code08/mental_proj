@@ -1,0 +1,13 @@
+{
+  "noise_floor": {
+    "input_noise_sd_0.25h": {
+      "prediction_change_sd": 0.2636597116302624,
+      "abs_change_p95": 0.5489999999999943
+    },
+    "input_noise_sd_0.5h": {
+      "prediction_change_sd": 0.35872532471823676,
+      "abs_change_p95": 0.7600249999999991
+    }
+  },
+  "assumption": "Assumed self-report noise (0.25/0.5 h; 10% unlocks). NOT measured."
+}

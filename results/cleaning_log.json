@@ -1,0 +1,6 @@
+{
+  "rows_raw": 5000,
+  "duplicates_dropped": 2,
+  "negative_activity_clipped": 10,
+  "rows_clean": 4998
+}

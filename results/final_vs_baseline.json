@@ -1,0 +1,34 @@
+{
+  "baseline_original_pickle": {
+    "MAE": 0.34650236666666673,
+    "RMSE": 0.46286995531682545,
+    "R2": 0.8780167461546369,
+    "Bias": -0.014561766666666656,
+    "n": 1500
+  },
+  "baseline_config_refit": {
+    "MAE": 0.34722113333333343,
+    "RMSE": 0.46368105222591677,
+    "R2": 0.8775888638668996,
+    "Bias": -0.014566733333333363,
+    "n": 1500
+  },
+  "improved": {
+    "MAE": 0.33271357142857166,
+    "RMSE": 0.4420515881290307,
+    "R2": 0.8887427962726623,
+    "Bias": -0.01866029047619087,
+    "n": 1500
+  },
+  "delta_MAE_baseline_minus_improved": 0.013788795238095064,
+  "delta_MAE_CI95": [
+    0.008338528869047256,
+    0.019048544404761624
+  ],
+  "delta_R2_improved_minus_baseline": 0.01072605011802541,
+  "delta_R2_CI95": [
+    0.00665216651703554,
+    0.01518448588226955
+  ],
+  "note": "Paired bootstrap over the 1,500 test rows (2000 resamples). CI excluding 0 => difference not explained by test-set sampling alone; it does not account for training-set variability."
+}

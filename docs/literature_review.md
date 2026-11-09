@@ -1,0 +1,17 @@
+# Literature review - PARTIAL (verified entries only)
+
+Status: I verified the sources below by retrieving their bibliographic records/abstracts in this session. **A systematic survey of ML prediction of student mental health is NOT DONE**; no novelty claim is made. Fields I did not verify are marked NOT VERIFIED.
+
+| Ref | Title / venue | Verified content | Relation to this project |
+|---|---|---|---|
+| Braghieri, Levy, Makarin (2022) | *Social Media and Mental Health*, American Economic Review 112(11):3660-3693, doi:10.1257/aer.20211218 | Quasi-experimental estimate using staggered rollout of Facebook across US colleges; finds a negative effect on student mental health; suggests unfavourable social comparison as mechanism. | Contrast: a causal design. Our model is observational and predictive only. |
+| Draženović, Vukušić Rukavina, Machala Poplašen (2023) | *Impact of Social Media Use on Mental Health within Adolescent and Student Populations during COVID-19 Pandemic: Review*, IJERPH 20(4):3392 | Review of 13 articles (of 1,136 records); most report negative association of prolonged/active use with anxiety, depression, stress; two report potential positive effects. | Motivation; supports association framing. Sample/time window limited to early pandemic. |
+| Lei, G'Sell, Rinaldo, Tibshirani, Wasserman (2018) | *Distribution-Free Predictive Inference for Regression*, JASA 113(523):1094-1111, doi:10.1080/01621459.2017.1307116 | Conformal prediction bands from any regression estimator with finite-sample marginal coverage. | Basis of our uncertainty method (split/cross-conformal variants; locally-weighted scores). |
+| Barber, Candes, Ramdas, Tibshirani (2021) | *Predictive inference with the jackknife+*, Annals of Statistics 49(1):486-507 | Bibliographic record verified via other papers' reference lists; abstract NOT VERIFIED. | Related to our OOF-residual (cross-conformal) approach; our guarantee is only approximate. |
+| Barber, Candes, Ramdas, Tibshirani (2021) | *The limits of distribution-free conditional predictive inference*, Information and Inference 10(2):455-482 | Bibliographic record verified; abstract NOT VERIFIED. | Explains why we report conditional coverage empirically and do not claim per-subgroup validity. |
+| Strumbelj & Kononenko (2014) | *Explaining prediction models and individual predictions with feature contributions*, KAIS 41(3):647-665, doi:10.1007/s10115-013-0679-x | Model-agnostic method perturbing subsets of features; equivalent to additive-model methods when the model is additive. | Basis of our Monte-Carlo Shapley implementation (`shap` unavailable offline). |
+| Kaggle dataset page | Student Social Media & Mental Health Impact | Describes 5,000 records "designed" as a realistic representation for educational use. | Data provenance limitation. |
+| A public GitHub project on the same dataset | (title/authors NOT VERIFIED) | Reports converting the score to Poor/Fair/Good and using Logistic Regression, Random Forest, XGBoost. | Shows the dataset is used in classification projects; results NOT VERIFIED and not comparable to our regression setup. |
+
+## Still to do (search protocol)
+Query PubMed/IEEE/ACM/Springer/arXiv for: "student mental health prediction machine learning", "digital wellbeing prediction explainable", "conformal prediction health regression", "fairness subgroup evaluation mental health prediction", and record Title/Authors/Year/Dataset/Method/Features/Target/Metrics/Limitations for each. Verify each record before citing.

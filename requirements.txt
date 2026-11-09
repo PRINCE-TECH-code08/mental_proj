@@ -1,0 +1,10 @@
+# Runtime (backend). numpy/pandas/scikit-learn/scipy/joblib are the EXACT versions the model bundle was trained and tested with.
+# fastapi/uvicorn/pydantic keep the pins from the original project (not executable in the build sandbox; verified by CI).
+fastapi==0.115.13
+uvicorn==0.34.3
+pydantic==2.10.6
+joblib==1.5.3
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1

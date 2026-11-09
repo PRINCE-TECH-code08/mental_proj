@@ -1,0 +1,14 @@
+.git
+baseline
+data
+results
+figures
+reports
+docs
+paper
+frontend
+scripts
+tests
+__pycache__
+*.ipynb
+.env

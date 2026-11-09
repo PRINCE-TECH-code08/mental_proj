@@ -1,0 +1,7 @@
+{
+  "model": "Random Forest (selected)",
+  "use_engineered_features": false,
+  "dMAE_F_vs_E": 0.027773555002043697,
+  "paired_SE": 0.0011020351031235296,
+  "rule": "adopt engineered features only if MAE improves by more than 2 paired standard errors"
+}

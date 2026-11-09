@@ -1,0 +1,31 @@
+Random Forest (selected) A: Demographics 0.9803
+Random Forest (selected) B: Demographics + Social media 0.3523
+Random Forest (selected) C: Lifestyle 0.5556
+Random Forest (selected) D: Social media + Lifestyle 0.3955
+Random Forest (selected) E: All features (baseline set) 0.3469
+Random Forest (selected) F: All + engineered 0.3747
+Random Forest (selected) G: All minus Stress_Level 0.3494
+Random Forest (selected) H: Stress_Level only 0.6223
+Random Forest (selected) I: All minus Social media 0.419
+Random Forest (selected) J: All minus Lifestyle 0.3452
+Random Forest (selected) K: All minus Demographics 0.3907
+Ridge (reference) A: Demographics 1.0168
+Ridge (reference) B: Demographics + Social media 0.564
+Ridge (reference) C: Lifestyle 0.5735
+Ridge (reference) D: Social media + Lifestyle 0.536
+Ridge (reference) E: All features (baseline set) 0.5239
+Ridge (reference) F: All + engineered 0.525
+Ridge (reference) G: All minus Stress_Level 0.5258
+Ridge (reference) H: Stress_Level only 0.6212
+Ridge (reference) I: All minus Social media 0.5483
+Ridge (reference) J: All minus Lifestyle 0.5512
+Ridge (reference) K: All minus Demographics 0.5345
+Random Forest (selected) Unlocks_Per_Screen_Hour 0.0145
+Random Forest (selected) Sleep_Deficit_Hours 0.0031
+Random Forest (selected) Study_Screen_Ratio 0.0116
+Random Forest (selected) Activity_Screen_Ratio 0.0125
+Ridge (reference) Unlocks_Per_Screen_Hour 0.0003
+Ridge (reference) Sleep_Deficit_Hours 0.0006
+Ridge (reference) Study_Screen_Ratio 0.0003
+Ridge (reference) Activity_Screen_Ratio 0.0003
+{'model': 'Random Forest (selected)', 'use_engineered_features': False, 'dMAE_F_vs_E': np.float64(0.027773555002043697), 'paired_SE': np.float64(0.0011020351031235296), 'rule': 'adopt engineered features only if MAE improves by more than 2 paired standard errors'}

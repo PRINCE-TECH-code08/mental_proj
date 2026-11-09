@@ -1,0 +1,31 @@
+{
+  "efficiency_max_abs_violation": 1.7763568394002505e-15,
+  "spearman_perm_vs_shapley_ranking": 0.8811188811188813,
+  "convergence_24_vs_600_perms": [
+    {
+      "pearson": 0.9763920752965949,
+      "max_abs_diff": 0.07839000000000135
+    },
+    {
+      "pearson": 0.9946915070089016,
+      "max_abs_diff": 0.06213600000000025
+    },
+    {
+      "pearson": 0.9791530640039552,
+      "max_abs_diff": 0.08627583333333372
+    },
+    {
+      "pearson": 0.9455726863312807,
+      "max_abs_diff": 0.10155333333333383
+    },
+    {
+      "pearson": 0.9490483978579046,
+      "max_abs_diff": 0.0834549999999997
+    },
+    {
+      "pearson": 0.4828791477657875,
+      "max_abs_diff": 0.10930783333333281
+    }
+  ],
+  "note": "Efficiency violations are floating-point only; convergence shows the API's 24-permutation estimate approximates a 600-permutation reference."
+}

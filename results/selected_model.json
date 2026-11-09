@@ -1,0 +1,29 @@
+{
+  "selected": "Random Forest",
+  "params": {
+    "n_estimators": 200,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 0.33,
+    "max_depth": null
+  },
+  "nested_cv_MAE": 0.34867707215409793,
+  "nested_cv_MAE_sd": 0.018760480470518717,
+  "all_best_params": {
+    "Random Forest": {
+      "n_estimators": 200,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": 0.33,
+      "max_depth": null
+    },
+    "HistGradientBoosting": {
+      "min_samples_leaf": 10,
+      "max_leaf_nodes": 31,
+      "max_iter": 800,
+      "learning_rate": 0.03,
+      "l2_regularization": 0.1
+    }
+  },
+  "rule": "lowest nested-CV MAE on training data; test set untouched"
+}

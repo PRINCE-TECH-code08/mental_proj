@@ -1,0 +1,71 @@
+{
+  "model_version": "2.0.0",
+  "training_date": "2026-09-24",
+  "algorithm": "Random Forest",
+  "hyperparameters": {
+    "n_estimators": 200,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 0.33,
+    "max_depth": null
+  },
+  "engineered_features": false,
+  "features": [
+    "Age",
+    "Gender",
+    "Grouped_country",
+    "Academic_Level",
+    "Most_Used_Platform",
+    "Purpose_Of_Use",
+    "Avg_Daily_Usage_Hours",
+    "Daily_Unlocks",
+    "Study_Hours",
+    "Physical_Activity_Hours",
+    "Sleep_Hours_Per_Night",
+    "Stress_Level"
+  ],
+  "raw_inputs": [
+    "Age",
+    "Gender",
+    "Country",
+    "Academic_Level",
+    "Most_Used_Platform",
+    "Purpose_Of_Use",
+    "Avg_Daily_Usage_Hours",
+    "Daily_Unlocks",
+    "Study_Hours",
+    "Physical_Activity_Hours",
+    "Sleep_Hours_Per_Night",
+    "Stress_Level"
+  ],
+  "random_seed": 42,
+  "split": "train_test_split(test_size=0.3, random_state=42)",
+  "dataset_sha256": "1bb518b237acd5bd4ff4e71056ecd81769c3c49b077a872943c56ba26ccc12b5",
+  "dataset_rows_clean": 4998,
+  "n_train": 3498,
+  "n_test": 1500,
+  "test_metrics": {
+    "MAE": 0.33271357142857166,
+    "RMSE": 0.4420515881290307,
+    "R2": 0.8887427962726623,
+    "Bias": -0.01866029047619087,
+    "n": 1500
+  },
+  "baseline_test_metrics": {
+    "MAE": 0.34650236666666673,
+    "RMSE": 0.46286995531682545,
+    "R2": 0.8780167461546369,
+    "Bias": -0.014561766666666656,
+    "n": 1500
+  },
+  "libs": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "joblib": "1.5.3"
+  },
+  "interval_method": "cross-conformal on out-of-fold residuals (5-fold), global and locally-weighted",
+  "disclaimer": "Predicts a dataset-specific wellbeing score from self-reported habits. Not a diagnosis. Associations are not causal."
+}

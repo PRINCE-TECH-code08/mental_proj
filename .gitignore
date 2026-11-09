@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+node_modules/
+results/_tuning_cache/
+.ipynb_checkpoints/
+.DS_Store

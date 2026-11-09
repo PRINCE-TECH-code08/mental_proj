@@ -1,0 +1,10 @@
+# Data Card - Student Social Media And Mental Health Impact
+
+- **File:** `data/raw/Student_Social_Media_And_Mental_Health_Impact.csv` (SHA-256 in `data/raw/CHECKSUM.sha256`), 5,000 rows x 13 columns, no missing values.
+- **Source:** Kaggle dataset "Student Social Media & Mental Health Impact" (https://www.kaggle.com/datasets/shivasingh4945/student-social-media-and-mental-health-impact), obtained by the project author.
+- **Provenance: NOT ESTABLISHED.** The Kaggle description says the 5,000 records were "designed" to analyse relationships and offer "a realistic representation of student behavior", intended for "educational, analytical, and machine learning purposes ... portfolio development". No collection protocol, consent, instrument or sampling frame is documented. It is therefore **not established that these are real survey responses**, and results must be read as results on this file only.
+- **Variables:** Age (18-24), Gender (Male/Female), Country (111 values; 'Other' = 37.6%), Academic_Level (High School/Undergraduate/Graduate), Most_Used_Platform (12), Purpose_Of_Use (4), Avg_Daily_Usage_Hours, Daily_Unlocks, Study_Hours, Physical_Activity_Hours, Sleep_Hours_Per_Night, Stress_Level (Low..Very High), **Mental_Health_Score (target; observed 3.6-9.4)**. How the score was measured: NOT ESTABLISHED.
+- **Quality:** 2 duplicate rows (dropped), 10 negative `Physical_Activity_Hours` (clipped to 0), otherwise no invalid values found. Full report: `reports/data_quality_report.md`.
+- **Representation:** only two gender values; ages 18-24 only; undergraduates 72.6%; several countries <100 rows.
+- **Preprocessing:** `src/mhp/data.py`, `src/mhp/features.py` (log1p+scale for Study_Hours, scale numeric, ordinal stress, one-hot nominal, top-10 country grouping fitted on training data only). Raw data never modified.
+- **Bias considerations:** country and platform composition is imbalanced; the data are cross-sectional (no person-level time dimension), so within-person change cannot be studied with them.
