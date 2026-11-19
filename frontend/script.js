@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const API_BASE = (window.MHP_CONFIG && window.MHP_CONFIG.API_BASE) || "http://127.0.0.1:8000";
+  const API_BASE = (window.MHP_CONFIG && window.MHP_CONFIG.API_BASE) || "https://mental-health-api-qrn4.onrender.com/";
   const L = window.MHP;
   const $ = (id) => document.getElementById(id);
   const form = $("predict-form"), submitBtn = $("submit-btn");
