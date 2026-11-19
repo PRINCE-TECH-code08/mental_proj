@@ -16,7 +16,7 @@ from mhp.service import ModelService, InputError
 
 logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"), format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("mhp.api")
-ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "https://mental-health-prediction-mu.vercel.app,http://localhost:5500,http://127.0.0.1:5500,http://localhost:8080").split(",") if o.strip()]
+ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "https://mental-health-prediction-mu.vercel.app,http://localhost:5500,https://mental-health-api-qrn4.onrender.com,http://127.0.0.1:5500,http://localhost:8080").split(",") if o.strip()]
 RATE = int(os.getenv("RATE_LIMIT_PER_MIN", "60"))
 BUNDLE = Path(os.getenv("MODEL_BUNDLE", ROOT / "models" / "model_bundle.joblib"))
 BASELINE = Path(os.getenv("BASELINE_MODEL", ROOT / "baseline" / "Mental_Health_Model.pkl"))
