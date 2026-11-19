@@ -12,7 +12,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://mental-health-api-qrn4.onrender.com/"],
+    allow_origins=[
+        "https://mental-proj.netlify.app",
+        "https://mental-health-prediction-mu.vercel.app",
+        "http://localhost:5500",
+        "http://127.0.0.1:5500",
+        "http://localhost:8080",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
